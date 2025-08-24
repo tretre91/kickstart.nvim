@@ -4,6 +4,13 @@ return {
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help ibl`
     main = 'ibl',
-    opts = {},
+    opts = {
+      indent = {
+        char = '┊',
+      },
+      whitespace = {
+        remove_blankline_trail = true,
+      },
+    },
   },
 }
