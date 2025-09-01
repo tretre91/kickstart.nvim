@@ -415,6 +415,7 @@ require('lazy').setup({
 
       -- [[ Configure Telescope ]]
       -- See `:help telescope` and `:help telescope.setup()`
+      local fd = (vim.fn.executable 'fd' == 1 and 'fd') or 'fdfind'
       require('telescope').setup {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
@@ -426,7 +427,7 @@ require('lazy').setup({
         -- },
         pickers = {
           find_files = {
-            find_command = { 'fd', '--hidden', '--type=file', '--exclude=.git/', '--exclude=node_modules/' },
+            find_command = { fd, '--hidden', '--type=file', '--exclude=.git/', '--exclude=node_modules/' },
           },
         },
         extensions = {
