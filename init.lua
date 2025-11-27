@@ -431,6 +431,20 @@ require('lazy').setup({
         --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
         --   },
         -- },
+        defaults = {
+          vimgrep_arguments = {
+            'rg',
+            '--color=never',
+            '--no-heading',
+            '--with-filename',
+            '--line-number',
+            '--column',
+            '--smart-case',
+            '--hidden',
+            '--glob=!.git/',
+            '--glob=!.node_modules/',
+          },
+        },
         pickers = {
           find_files = {
             find_command = { fd, '--hidden', '--type=file', '--exclude=.git/', '--exclude=node_modules/' },
