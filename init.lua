@@ -736,7 +736,7 @@ require('lazy').setup({
           },
         },
         clangd = {},
-        cmake = {},
+        neocmake = {},
         pyright = {},
       }
 
