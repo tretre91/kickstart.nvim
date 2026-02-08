@@ -449,6 +449,9 @@ require('lazy').setup({
           find_files = {
             find_command = { fd, '--hidden', '--type=file', '--exclude=.git/', '--exclude=node_modules/' },
           },
+          colorscheme = {
+            enable_preview = true,
+          },
         },
         extensions = {
           ['ui-select'] = {
@@ -812,7 +815,8 @@ require('lazy').setup({
         -- Conform can also run multiple formatters sequentially
         python = { 'isort', 'black' },
         typst = { 'typstyle' },
-        --
+        html = { 'prettierd', 'prettier', stop_after_first = true },
+        css = { 'prettierd', 'prettier', stop_after_first = true },
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
       },
